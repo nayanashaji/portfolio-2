@@ -1,0 +1,57 @@
+@import "tailwindcss/preflight";
+@tailwind utilities;
+@import "tailwindcss";
+
+:root{
+  --bg:#050816;
+  --card:rgba(255,255,255,0.08);
+
+  --cyan:#00F5D4;
+  --violet:#7B61FF;
+  --pink:#FF5EA8;
+
+  --text:#F8FAFC;
+  --muted:#94A3B8;
+}
+
+body{
+  background:#050816;
+  color:white;
+  overflow-x:hidden;
+}
+
+.glass{
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(18px);
+  border:1px solid rgba(255,255,255,0.1);
+}
+
+.glow{
+  box-shadow:
+  0 0 40px rgba(123,97,255,.25),
+  0 0 80px rgba(0,245,212,.15);
+}
+
+.gradient-text{
+  background:linear-gradient(
+      90deg,
+      #00F5D4,
+      #7B61FF,
+      #FF5EA8
+  );
+
+  -webkit-background-clip:text;
+  color:transparent;
+}
+
+.swiper-pagination-bullet {
+  background: #00f5d4 !important;
+}
+
+.swiper-slide {
+  transition: all 0.5s ease;
+}
+
+.swiper-slide-active {
+  transform: scale(1.02);
+}
