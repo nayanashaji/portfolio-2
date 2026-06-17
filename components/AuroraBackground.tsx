@@ -1,38 +1,55 @@
+"use client";
+
 export default function AuroraBackground() {
   return (
-    <>
-      <div className="
+    <div
+      className="
       fixed
-      top-[-200px]
-      left-[-200px]
-      w-[500px]
-      h-[500px]
-      rounded-full
-      blur-[140px]
-      bg-cyan-500/20
-      " />
+      inset-0
+      z-0
+      pointer-events-none
+      overflow-hidden
+      "
+    >
+      {/* Aurora Layer */}
 
-      <div className="
-      fixed
-      bottom-[-200px]
-      right-[-200px]
-      w-[500px]
-      h-[500px]
-      rounded-full
-      blur-[140px]
-      bg-violet-500/20
-      " />
+      <div
+        className="
+        absolute
+        inset-0
+        opacity-70
+        animate-gradient
+        "
+        style={{
+          background: `
+          radial-gradient(
+            circle at 20% 20%,
+            rgba(0,245,212,0.25),
+            transparent 30%
+          ),
 
-      <div className="
-      fixed
-      top-[30%]
-      left-[50%]
-      w-[400px]
-      h-[400px]
-      rounded-full
-      blur-[150px]
-      bg-pink-500/10
-      " />
-    </>
-  )
+          radial-gradient(
+            circle at 80% 30%,
+            rgba(123,97,255,0.25),
+            transparent 35%
+          ),
+
+          radial-gradient(
+            circle at 50% 80%,
+            rgba(255,94,168,0.18),
+            transparent 35%
+          )
+        `,
+        }}
+      />
+
+      {/* Floating Orbs */}
+
+      <div className="orb orb-cyan" />
+
+      <div className="orb orb-violet" />
+
+      <div className="orb orb-pink" />
+    </div>
+  );
 }

@@ -1,57 +1,358 @@
-@import "tailwindcss/preflight";
-@tailwind utilities;
 @import "tailwindcss";
 
-:root{
-  --bg:#050816;
-  --card:rgba(255,255,255,0.08);
+/* =========================
+   ROOT VARIABLES
+========================= */
 
-  --cyan:#00F5D4;
-  --violet:#7B61FF;
-  --pink:#FF5EA8;
+:root {
+  --bg: #050816;
 
-  --text:#F8FAFC;
-  --muted:#94A3B8;
+  --cyan: #00f5d4;
+  --violet: #7b61ff;
+  --pink: #ff5ea8;
+
+  --text: #f8fafc;
+  --muted: #94a3b8;
 }
 
-body{
-  background:#050816;
-  color:white;
-  overflow-x:hidden;
+/* =========================
+   GLOBALS
+========================= */
+
+* {
+  box-sizing: border-box;
 }
 
-.glass{
-  background:rgba(255,255,255,0.08);
-  backdrop-filter:blur(18px);
-  border:1px solid rgba(255,255,255,0.1);
+html {
+  scroll-behavior: smooth;
 }
 
-.glow{
-  box-shadow:
-  0 0 40px rgba(123,97,255,.25),
-  0 0 80px rgba(0,245,212,.15);
+body {
+  background: var(--bg);
+  color: white;
+  overflow-x: hidden;
+  min-height: 100vh;
 }
 
-.gradient-text{
-  background:linear-gradient(
+/* =========================
+   ANIMATED GRID
+========================= */
+
+body::before {
+  content: "";
+
+  position: fixed;
+  inset: 0;
+
+  background-image:
+    linear-gradient(
+      rgba(255,255,255,0.03) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
       90deg,
-      #00F5D4,
-      #7B61FF,
-      #FF5EA8
+      rgba(255,255,255,0.03) 1px,
+      transparent 1px
+    );
+
+  background-size: 80px 80px;
+
+  animation:
+    gridMove 40s linear infinite;
+
+  pointer-events: none;
+
+  z-index: -1;
+}
+
+@keyframes gridMove {
+
+  from {
+    background-position:
+      0px 0px;
+  }
+
+  to {
+    background-position:
+      0px 80px;
+  }
+}
+
+/* =========================
+   GLASSMORPHISM
+========================= */
+
+.glass {
+  background: rgba(255,255,255,0.06);
+
+  backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(
+    255,
+    255,
+    255,
+    0.08
+  );
+}
+
+/* =========================
+   CARD GLOW
+========================= */
+
+.glow {
+  box-shadow:
+    0 0 40px rgba(
+      0,
+      245,
+      212,
+      0.12
+    ),
+    0 0 80px rgba(
+      123,
+      97,
+      255,
+      0.12
+    );
+}
+
+/* =========================
+   GRADIENT TEXT
+========================= */
+
+.gradient-text {
+
+  background: linear-gradient(
+    90deg,
+    #00f5d4,
+    #7b61ff,
+    #ff5ea8
   );
 
-  -webkit-background-clip:text;
-  color:transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  -webkit-text-fill-color:
+    transparent;
 }
 
+/* =========================
+   AURORA MESH
+========================= */
+
+@keyframes gradientShift {
+
+  0% {
+    transform:
+      scale(1)
+      translate(0px, 0px);
+  }
+
+  50% {
+    transform:
+      scale(1.15)
+      translate(
+        40px,
+        -40px
+      );
+  }
+
+  100% {
+    transform:
+      scale(1)
+      translate(0px, 0px);
+  }
+}
+
+.animate-gradient {
+  animation:
+    gradientShift
+    18s
+    ease-in-out
+    infinite;
+}
+
+.orb {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(100px);
+  opacity: 0.35;
+}
+
+/* Cyan */
+
+.orb-cyan {
+  width: 500px;
+  height: 500px;
+
+  background: #00f5d4;
+
+  top: 10%;
+  left: -5%;
+
+  animation: float1 3s ease-in-out infinite;
+}
+
+/* Violet */
+
+.orb-violet {
+  width: 600px;
+  height: 600px;
+
+  background: #7b61ff;
+
+  top: 50%;
+  right: -10%;
+
+  animation: float2 4s ease-in-out infinite;
+}
+
+/* Pink */
+
+.orb-pink {
+  width: 400px;
+  height: 400px;
+
+  background: #ff5ea8;
+
+  top: 5%;
+  right: 30%;
+
+  animation: float3 4s ease-in-out infinite;
+}
+
+@keyframes float1 {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(80px, -40px);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes float2 {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(-100px, -50px);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes float3 {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(-50px, 80px);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+/* =========================
+   SCROLLBAR
+========================= */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.05
+    );
+}
+
+::-webkit-scrollbar-thumb {
+
+  background:
+    linear-gradient(
+      180deg,
+      #00f5d4,
+      #7b61ff,
+      #ff5ea8
+    );
+
+  border-radius: 999px;
+}
+
+/* =========================
+   SWIPER
+========================= */
+
 .swiper-pagination-bullet {
-  background: #00f5d4 !important;
+  background:
+    #00f5d4 !important;
 }
 
 .swiper-slide {
-  transition: all 0.5s ease;
+  transition:
+    all 0.5s ease;
 }
 
 .swiper-slide-active {
   transform: scale(1.02);
+}
+
+/* =========================
+   TIMELINE
+========================= */
+
+.timeline-dot {
+  animation:
+    pulseGlow
+    2s infinite;
+}
+
+@keyframes pulseGlow {
+
+  0% {
+    box-shadow:
+      0 0 10px
+      rgba(
+        0,
+        245,
+        212,
+        0.5
+      );
+  }
+
+  50% {
+    box-shadow:
+      0 0 30px
+      rgba(
+        0,
+        245,
+        212,
+        0.9
+      );
+  }
+
+  100% {
+    box-shadow:
+      0 0 10px
+      rgba(
+        0,
+        245,
+        212,
+        0.5
+      );
+  }
 }

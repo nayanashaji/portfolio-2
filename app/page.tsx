@@ -11,7 +11,7 @@ import MouseSpotlight from "@/components/MouseSpotlight";
 
 export default function Home() {
   return (
-    <main>
+    <main className="relative z-10">
 
       <AuroraBackground/>
 
