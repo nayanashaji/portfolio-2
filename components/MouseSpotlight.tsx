@@ -39,7 +39,7 @@ export default function MouseSpotlight() {
           200px circle at
           ${position.x}px
           ${position.y}px,
-          rgba(0,245,212,0.3),
+          rgba(0,245,212,0.12),
           transparent 70%
         )
         `,

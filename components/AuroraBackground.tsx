@@ -11,7 +11,6 @@ export default function AuroraBackground() {
       overflow-hidden
       "
     >
-      {/* Aurora Layer */}
 
       <div
         className="
@@ -24,8 +23,8 @@ export default function AuroraBackground() {
           background: `
           radial-gradient(
             circle at 20% 20%,
-            rgba(0,245,212,0.25),
-            transparent 30%
+            rgba(0,245,212,0.12),
+            transparent 35%
           ),
 
           radial-gradient(
@@ -42,8 +41,6 @@ export default function AuroraBackground() {
         `,
         }}
       />
-
-      {/* Floating Orbs */}
 
       <div className="orb orb-cyan" />
 

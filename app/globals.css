@@ -1,9 +1,5 @@
 @import "tailwindcss";
 
-/* =========================
-   ROOT VARIABLES
-========================= */
-
 :root {
   --bg: #050816;
 
@@ -14,10 +10,6 @@
   --text: #f8fafc;
   --muted: #94a3b8;
 }
-
-/* =========================
-   GLOBALS
-========================= */
 
 * {
   box-sizing: border-box;
@@ -33,10 +25,6 @@ body {
   overflow-x: hidden;
   min-height: 100vh;
 }
-
-/* =========================
-   ANIMATED GRID
-========================= */
 
 body::before {
   content: "";
@@ -78,10 +66,6 @@ body::before {
   }
 }
 
-/* =========================
-   GLASSMORPHISM
-========================= */
-
 .glass {
   background: rgba(255,255,255,0.06);
 
@@ -94,10 +78,6 @@ body::before {
     0.08
   );
 }
-
-/* =========================
-   CARD GLOW
-========================= */
 
 .glow {
   box-shadow:
@@ -115,10 +95,6 @@ body::before {
     );
 }
 
-/* =========================
-   GRADIENT TEXT
-========================= */
-
 .gradient-text {
 
   background: linear-gradient(
@@ -134,10 +110,6 @@ body::before {
   -webkit-text-fill-color:
     transparent;
 }
-
-/* =========================
-   AURORA MESH
-========================= */
 
 @keyframes gradientShift {
 
@@ -178,8 +150,6 @@ body::before {
   opacity: 0.35;
 }
 
-/* Cyan */
-
 .orb-cyan {
   width: 500px;
   height: 500px;
@@ -192,8 +162,6 @@ body::before {
   animation: float1 3s ease-in-out infinite;
 }
 
-/* Violet */
-
 .orb-violet {
   width: 600px;
   height: 600px;
@@ -205,8 +173,6 @@ body::before {
 
   animation: float2 4s ease-in-out infinite;
 }
-
-/* Pink */
 
 .orb-pink {
   width: 400px;
@@ -262,10 +228,6 @@ body::before {
   }
 }
 
-/* =========================
-   SCROLLBAR
-========================= */
-
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -293,10 +255,6 @@ body::before {
   border-radius: 999px;
 }
 
-/* =========================
-   SWIPER
-========================= */
-
 .swiper-pagination-bullet {
   background:
     #00f5d4 !important;
@@ -310,10 +268,6 @@ body::before {
 .swiper-slide-active {
   transform: scale(1.02);
 }
-
-/* =========================
-   TIMELINE
-========================= */
 
 .timeline-dot {
   animation:
