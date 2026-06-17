@@ -7,12 +7,15 @@ import Experience from "@/components/Experience";
 import Certifications from "@/components/Certifications";
 import Contact from "@/components/Contact";
 import AuroraBackground from "@/components/AuroraBackground";
+import MouseSpotlight from "@/components/MouseSpotlight";
 
 export default function Home() {
   return (
     <main>
 
       <AuroraBackground/>
+
+      <MouseSpotlight />
 
       <Hero/>
 
