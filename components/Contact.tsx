@@ -13,7 +13,7 @@ export default function Contact() {
       max-w-4xl
       mx-auto
       "
-      id="contact"
+      id="contacts"
     >
       <div className="glass rounded-3xl p-12 text-center">
 
