@@ -5,7 +5,7 @@ import CountUp from "react-countup";
 export default function Achievements() {
   return (
     <section className="py-32 px-6 max-w-6xl mx-auto">
-      <h2 className="text-5xl font-black text-center gradient-text mb-16">
+      <h2 className="freescpt text-8xl font-black text-center gradient-text mb-16">
         Achievements
       </h2>
 

@@ -9,6 +9,7 @@ import Contact from "@/components/Contact";
 import AuroraBackground from "@/components/AuroraBackground";
 import MouseSpotlight from "@/components/MouseSpotlight";
 import ScrollProgress from "@/components/ScrollProgress";
+import Navbar from "@/components/Navbar";
 
 export default function Home() {
   return (
@@ -19,6 +20,8 @@ export default function Home() {
       <MouseSpotlight />
 
       <ScrollProgress />
+
+      <Navbar/>
 
       <Hero/>
 

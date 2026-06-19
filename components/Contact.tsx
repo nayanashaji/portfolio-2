@@ -16,7 +16,7 @@ export default function Contact() {
     >
       <div className="glass rounded-3xl p-12 text-center">
 
-        <h2 className="text-5xl font-black gradient-text">
+        <h2 className="freescpt text-8xl font-black gradient-text">
           Let's Connect
         </h2>
 

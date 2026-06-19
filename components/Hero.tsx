@@ -32,20 +32,36 @@ text-center
 "
 >
 
-<h1
-className="
-text-7xl
-font-black
-gradient-text
-"
->
-NAYANA SHAJI
-</h1>
+<div className="mb-5">
+  <h1
+    className="
+    mondy
+    text-[7rem]
+    md:text-[7rem]
+    gradient-text
+    "
+  >
+    NAYANA
+  </h1>
+
+  <h1
+    className="
+    mondy
+    text-[7rem]
+    md:text-[7rem]
+    gradient-text
+    -mt-15
+    "
+  >
+    SHAJI
+  </h1>
+</div>
 
 <p
 className="
-mt-6
-text-xl
+freescpt 
+text-3xl
+mt-1
 text-slate-300
 "
 >

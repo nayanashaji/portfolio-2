@@ -7,14 +7,14 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="py-32 px-6 max-w-7xl mx-auto"
+      className="py-32 px-6 max-w-7xl mx-25"
     >
       <div className="mb-16">
         <p className="text-cyan-400 uppercase tracking-[0.3em] text-sm">
           Skills
         </p>
 
-        <h2 className="text-5xl md:text-7xl font-black mt-2">
+        <h2 className="freescpt text-8xl md:text-7xl font-black mt-2">
           My{" "}
           <span className="gradient-text">
             Toolkit

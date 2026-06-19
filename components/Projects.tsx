@@ -17,7 +17,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="py-32 px-6"
+      className="py-32 px-6 mx-25"
     >
       <div className="max-w-7xl mx-auto">
 
@@ -25,7 +25,7 @@ export default function Projects() {
           Featured Work
         </p>
 
-        <h2 className="text-5xl md:text-7xl font-black mt-3 mb-16">
+        <h2 className="freescpt text-8xl md:text-7xl font-black mt-3 mb-16">
           My{" "}
           <span className="gradient-text">
             Projects

@@ -15,6 +15,32 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: "Mondy";
+  src: url("/fonts/MONDYDEMO-REGULAR.OTF")
+    format("opentype");
+
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Freescpt";
+  src: url("/fonts/FREESCPT.TTF")
+    format("truetype");
+
+  font-weight: normal;
+  font-style: normal;
+}
+
+.freescpt{
+  font-family: "Freescpt", seriff ;
+}
+
+.mondy {
+  font-family: "Mondy", serif;
+}
+
 html {
   scroll-behavior: smooth;
 }

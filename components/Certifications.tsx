@@ -11,7 +11,7 @@ import { certifications } from "@/data/certifications";
 export default function Certifications() {
   return (
     <section className="py-32">
-      <h2 className="text-center text-5xl font-black gradient-text mb-20">
+      <h2 className="freescpt text-8xl text-center font-black gradient-text mb-20">
         Certifications
       </h2>
 

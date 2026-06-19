@@ -14,7 +14,7 @@ export default function About() {
         viewport={{ once: true }}
         className="glass rounded-3xl p-10"
       >
-        <h2 className="text-5xl font-black gradient-text mb-10">
+        <h2 className="freescpt text-8xl font-black gradient-text mb-5 px-2">
           About Me
         </h2>
 

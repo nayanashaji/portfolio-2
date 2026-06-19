@@ -12,14 +12,13 @@ export default function Experience() {
       id="experience"
       className="relative py-32 px-6 max-w-6xl mx-auto"
     >
-      {/* Heading */}
 
       <div className="mb-20">
         <p className="text-cyan-400 uppercase tracking-[0.35em] text-sm">
           Experience
         </p>
 
-        <h2 className="text-5xl md:text-7xl font-black mt-3">
+        <h2 className="freescpt text-8xl md:text-7xl font-black mt-3">
           My{" "}
           <span className="gradient-text">
             Journey
