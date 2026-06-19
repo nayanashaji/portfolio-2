@@ -19,7 +19,7 @@ export default function Navbar() {
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
-        <a href="#experience">Timeline</a>
+        <a href="#experience">Experience</a>
       </div>
     </nav>
   );

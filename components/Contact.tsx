@@ -27,16 +27,12 @@ export default function Contact() {
 
         <div className="flex justify-center gap-8 mt-10 text-3xl">
 
-          <a href="#">
+          <a href="https://github.com/nayanashaji">
             <FaGithub />
           </a>
 
-          <a href="#">
+          <a href="https://www.linkedin.com/in/nayanashajim/">
             <FaLinkedin />
-          </a>
-
-          <a href="#">
-            <FaEnvelope />
           </a>
 
         </div>
