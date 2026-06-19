@@ -10,7 +10,7 @@ import { certifications } from "@/data/certifications";
 
 export default function Certifications() {
   return (
-    <section className="py-32">
+    <section className="py-32" id="certifications">
       <h2 className="freescpt text-8xl text-center font-black gradient-text mb-20">
         Certifications
       </h2>
