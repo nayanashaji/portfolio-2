@@ -6,16 +6,18 @@ import Achievements from "@/components/Achievements";
 import Experience from "@/components/Experience";
 import Certifications from "@/components/Certifications";
 import Contact from "@/components/Contact";
-import AuroraBackground from "@/components/AuroraBackground";
 import MouseSpotlight from "@/components/MouseSpotlight";
 import ScrollProgress from "@/components/ScrollProgress";
 import Navbar from "@/components/Navbar";
+import HeroBackground from "@/components/HeroBackground";
 
 export default function Home() {
   return (
     <main className="relative z-10">
 
-      <AuroraBackground/>
+      
+
+      <HeroBackground/>
 
       <MouseSpotlight />
 
@@ -23,7 +25,9 @@ export default function Home() {
 
       <Navbar/>
 
+      <main>
       <Hero/>
+      </main>
 
       <About/>
 

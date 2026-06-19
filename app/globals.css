@@ -169,91 +169,6 @@ body::before {
     infinite;
 }
 
-.orb {
-  position: absolute;
-  border-radius: 9999px;
-  filter: blur(100px);
-  opacity: 0.35;
-}
-
-.orb-cyan {
-  width: 500px;
-  height: 500px;
-
-  background: #00f5d4;
-
-  top: 10%;
-  left: -5%;
-
-  animation: float1 3s ease-in-out infinite;
-}
-
-.orb-violet {
-  width: 600px;
-  height: 600px;
-
-  background: #7b61ff;
-
-  top: 50%;
-  right: -10%;
-
-  animation: float2 4s ease-in-out infinite;
-}
-
-.orb-pink {
-  width: 400px;
-  height: 400px;
-
-  background: #ff5ea8;
-
-  top: 5%;
-  right: 30%;
-
-  animation: float3 4s ease-in-out infinite;
-}
-
-@keyframes float1 {
-  0% {
-    transform: translate(0, 0);
-  }
-
-  50% {
-    transform: translate(80px, -40px);
-  }
-
-  100% {
-    transform: translate(0, 0);
-  }
-}
-
-@keyframes float2 {
-  0% {
-    transform: translate(0, 0);
-  }
-
-  50% {
-    transform: translate(-100px, -50px);
-  }
-
-  100% {
-    transform: translate(0, 0);
-  }
-}
-
-@keyframes float3 {
-  0% {
-    transform: translate(0, 0);
-  }
-
-  50% {
-    transform: translate(-50px, 80px);
-  }
-
-  100% {
-    transform: translate(0, 0);
-  }
-}
-
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -334,5 +249,37 @@ body::before {
         212,
         0.5
       );
+  }
+}
+
+
+.animate-purple {
+  animation:
+    glowPulse
+    3s
+    infinite;
+}
+
+.animate-pink {
+  animation:
+    glowPulse
+    3s
+    infinite;
+}
+
+@keyframes glowPulse {
+  0% {
+    opacity: 0.50;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.08);
+  }
+
+  100% {
+    opacity: 0.50;
+    transform: scale(1);
   }
 }
