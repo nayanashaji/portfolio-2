@@ -7,11 +7,10 @@ export const experiences = [
 
      details: [
         "Developed responsive and user-friendly web interfaces using modern frontend technologies.",
-        "Implemented interactive UI components while following industry-standard development practices.",
+        "Implemented interactive UI components.",
         "Worked on debugging, testing and optimizing web applications to improve performance and user experience.",
-        "Collaborated with team members through version control workflows and participated in project discussions.",
-        "Applied software engineering principles to build maintainable and scalable solutions.",
-        "Gained hands-on experience with real-world development environments, deployment workflows and collaborative development."
+        "Built maintainable and scalable solutions.",
+        "Gained hands-on experience with real-world development environments, and deployment workflows."
     ],
 
     tech: [
@@ -35,7 +34,6 @@ export const experiences = [
         "Crafted technical and non-technical articles to communicate complex concepts in an accessible manner.",
         "Contributed to branding and outreach efforts that increased student participation in workshops and events.",
         "Collaborated with organizers, designers and community leads to ensure consistent messaging across platforms.",
-        "Developed content strategies for technology-focused events, helping promote innovation and student engagement.",
         "Strengthened skills in storytelling, technical communication and audience-focused content creation."
     ],
 

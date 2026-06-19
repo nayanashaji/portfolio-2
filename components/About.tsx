@@ -33,15 +33,7 @@ export default function About() {
 
   <div className="max-w-2xl">
     <p className="text-2xl text-slate-300 leading-relaxed">
-      Computer Science Engineering student passionate
-      about Artificial Intelligence, Computer Vision,
-      Accessibility Technology and Full Stack Development.
-    </p>
-
-    <p className="text-2xl text-slate-300 mt-8 leading-relaxed">
-      I enjoy building projects that solve real-world
-      problems such as crowd safety systems,
-      legal-tech platforms and assistive technologies.
+      I'm a CS Engineering student at GEC Thrissur building things that sit at the intersection of AI and real-world impact. I've shipped a crowd stampede detector, an AI legal tool that cracked Top 10 at HackOdisha 5.0, and a braille phone cover... all from hackathon ideas. I care about accessibility, messy problems, and tech that actually helps people.
     </p>
   </div>
 
