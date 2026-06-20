@@ -5,32 +5,60 @@ import { motion, AnimatePresence } from "framer-motion";
 import { experiences } from "@/data/experience";
 
 export default function Experience() {
-  const [active, setActive] = useState<number | null>(0);
+  const [active, setActive] =
+    useState<number | null>(0);
 
   return (
     <section
       id="experience"
-      className="relative py-32 px-6 max-w-6xl mx-auto"
+      className="
+      py-32
+      px-6
+      max-w-7xl
+      mx-auto
+      "
     >
-
-      <div className="mb-20">
-        <p className="text-cyan-400 uppercase tracking-[0.35em] text-sm">
+      <div className="text-center mb-20">
+        <p
+          className="
+          text-cyan-400
+          uppercase
+          tracking-[0.4em]
+          text-sm
+          "
+        >
           Experience
         </p>
 
-        <h2 className="freescpt text-8xl md:text-7xl font-black mt-3">
+        <h2
+          className="
+          freescpt
+          text-6xl
+          md:text-8xl
+          mt-4
+          "
+        >
           My{" "}
           <span className="gradient-text">
             Journey
           </span>
         </h2>
+
+        <p
+          className="
+          text-slate-400
+          mt-4
+          max-w-2xl
+          mx-auto
+          "
+        >
+          Leadership roles, internships,
+          community involvement and experiences
+          that shaped my growth as a developer.
+        </p>
       </div>
 
-      {/* Timeline */}
-
       <div className="relative">
-
-        {/* Line */}
 
         <div
           className="
@@ -38,7 +66,8 @@ export default function Experience() {
           left-4
           top-0
           bottom-0
-          w-[2px]
+          w-[3px]
+          rounded-full
           bg-gradient-to-b
           from-cyan-400
           via-violet-500
@@ -49,7 +78,6 @@ export default function Experience() {
         <div className="space-y-10">
 
           {experiences.map((exp, index) => {
-
             const isOpen =
               active === index;
 
@@ -59,17 +87,18 @@ export default function Experience() {
                 className="relative"
               >
 
-                {/* Timeline Dot */}
+                {/* Dot */}
 
                 <div
                   className={`
                   absolute
                   left-0
-                  top-6
+                  top-5
                   w-8
                   h-8
                   rounded-full
                   z-10
+                  transition-all
 
                   ${
                     isOpen
@@ -83,10 +112,10 @@ export default function Experience() {
 
                   <motion.button
                     whileHover={{
-                      scale: 1.01,
+                      y: -3,
                     }}
                     whileTap={{
-                      scale: 0.98,
+                      scale: 0.99,
                     }}
                     onClick={() =>
                       setActive(
@@ -113,23 +142,49 @@ export default function Experience() {
                       flex
                       justify-between
                       items-center
+                      gap-4
                       "
                     >
                       <div>
 
-                        <h3
+                        <div
                           className="
-                          text-2xl
-                          md:text-3xl
-                          font-bold
+                          flex
+                          flex-wrap
+                          gap-3
+                          items-center
                           "
                         >
-                          {exp.role}
-                        </h3>
+                          <h3
+                            className="
+                            text-xl
+                            md:text-3xl
+                            font-bold
+                            gradient-text
+                            "
+                          >
+                            {exp.role}
+                          </h3>
+
+                          {exp.current && (
+                            <span
+                              className="
+                              px-3
+                              py-1
+                              rounded-full
+                              text-xs
+                              bg-cyan-500/15
+                              text-cyan-400
+                              "
+                            >
+                              CURRENT
+                            </span>
+                          )}
+                        </div>
 
                         <p
                           className="
-                          text-slate-400
+                          text-slate-300
                           mt-2
                           "
                         >
@@ -139,7 +194,7 @@ export default function Experience() {
                         <p
                           className="
                           text-cyan-400
-                          mt-3
+                          mt-2
                           text-sm
                           "
                         >
@@ -155,20 +210,15 @@ export default function Experience() {
                               ? 180
                               : 0,
                         }}
-                        transition={{
-                          duration: 0.3,
-                        }}
                         className="
-                        text-3xl
                         text-cyan-400
+                        text-2xl
                         "
                       >
                         ▼
                       </motion.div>
                     </div>
                   </motion.button>
-
-                  {/* Expandable Content */}
 
                   <AnimatePresence>
 
@@ -188,13 +238,12 @@ export default function Experience() {
                           height: 0,
                         }}
                         transition={{
-                          duration: 0.35,
+                          duration: 0.3,
                         }}
                         className="
                         overflow-hidden
                         "
                       >
-
                         <div
                           className="
                           glass
@@ -206,6 +255,21 @@ export default function Experience() {
                           "
                         >
 
+                          <div
+                            className="
+                            inline-flex
+                            mb-6
+                            px-4
+                            py-2
+                            rounded-full
+                            bg-cyan-500/10
+                            border
+                            border-cyan-500/20
+                            "
+                          >
+                            🏆 {exp.achievement}
+                          </div>
+
                           <ul
                             className="
                             space-y-4
@@ -213,9 +277,7 @@ export default function Experience() {
                             "
                           >
                             {exp.details.map(
-                              (
-                                item: string
-                              ) => (
+                              (item) => (
                                 <li
                                   key={item}
                                   className="
@@ -223,11 +285,7 @@ export default function Experience() {
                                   gap-3
                                   "
                                 >
-                                  <span
-                                    className="
-                                    text-cyan-400
-                                    "
-                                  >
+                                  <span className="text-cyan-400">
                                     ●
                                   </span>
 
@@ -248,16 +306,16 @@ export default function Experience() {
                             "
                           >
                             {exp.tech.map(
-                              (
-                                tech: string
-                              ) => (
+                              (tech) => (
                                 <span
                                   key={tech}
                                   className="
                                   px-4
                                   py-2
                                   rounded-xl
-                                  bg-cyan-500/10
+                                  bg-gradient-to-r
+                                  from-cyan-500/10
+                                  to-violet-500/10
                                   border
                                   border-cyan-500/20
                                   text-sm
@@ -270,7 +328,6 @@ export default function Experience() {
                           </div>
 
                         </div>
-
                       </motion.div>
 
                     )}

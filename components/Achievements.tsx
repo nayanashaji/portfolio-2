@@ -1,44 +1,120 @@
 "use client";
 
-import CountUp from "react-countup";
+import { motion } from "framer-motion";
+
+const achievements = [
+  {
+    title: "AIR 4",
+    subtitle: "Grade 10",
+    icon: "🏆",
+  },
+  {
+    title: "98.25%",
+    subtitle: "Higher Secondary",
+    icon: "🎓",
+  },
+  {
+    title: "Top 10",
+    subtitle: "HackOdisha 5.0",
+    icon: "🚀",
+  },
+  {
+    title: "Top 15",
+    subtitle: "Hack For Nothing",
+    icon: "💡",
+  },
+  {
+    title: "Head Girl",
+    subtitle: "School Leadership",
+    icon: "👑",
+  },
+  {
+    title: "Class Rep",
+    subtitle: "GEC Thrissur",
+    icon: "🎯",
+  },
+  {
+    title: "Writer",
+    subtitle: "TinkerHub GECT",
+    icon: "✍️",
+  },
+];
 
 export default function Achievements() {
   return (
-    <section className="py-32 px-6 max-w-6xl mx-auto">
-      <h2 className="freescpt text-8xl font-black text-center gradient-text mb-16">
-        Achievements
-      </h2>
+    <section
+      id="achievements"
+      className="py-32 px-6 max-w-7xl mx-auto"
+    >
+      <div className="text-center mb-16">
+        <p className="text-cyan-400 uppercase tracking-[0.4em] text-sm">
+          Highlights
+        </p>
 
-      <div className="grid md:grid-cols-4 gap-6">
+        <h2 className="freescpt text-6xl md:text-8xl mt-4">
+          My{" "}
+          <span className="gradient-text">
+            Achievements
+          </span>
+        </h2>
+      </div>
 
-        <div className="glass p-8 rounded-3xl text-center">
-          <h3 className="text-5xl font-bold">
-            <CountUp end={6} />
-          </h3>
-          <p>Projects</p>
-        </div>
+      <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-6">
+        {achievements.map((item, index) => (
+          <motion.div
+            key={item.title}
+            initial={{
+              opacity: 0,
+              y: 40,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+            }}
+            viewport={{ once: true }}
+            transition={{
+              delay: index * 0.05,
+            }}
+            whileHover={{
+              y: -8,
+            }}
+            className="
+            glass
+            rounded-3xl
+            p-8
+            text-center
+            border
+            border-white/10
+            hover:border-cyan-400/30
+            transition-all
+            duration-500
+            "
+          >
+            <div className="text-5xl mb-4">
+              {item.icon}
+            </div>
 
-        <div className="glass p-8 rounded-3xl text-center">
-          <h3 className="text-5xl font-bold">
-            Top 10
-          </h3>
-          <p>HackOdisha</p>
-        </div>
+            <h3
+              className="
+              text-4xl
+              font-bold
+              gradient-text
+              "
+            >
+              {item.title}
+            </h3>
 
-        <div className="glass p-8 rounded-3xl text-center">
-          <h3 className="text-5xl font-bold">
-            Top 15
-          </h3>
-          <p>Hack For Nothing</p>
-        </div>
-
-        <div className="glass p-8 rounded-3xl text-center">
-          <h3 className="text-5xl font-bold">
-            <CountUp end={3} />
-          </h3>
-          <p>Hackathons</p>
-        </div>
-
+            <p
+              className="
+              text-slate-300
+              mt-3
+              text-lg
+              "
+            >
+              {item.subtitle}
+            </p>
+          </motion.div>
+        ))}
       </div>
     </section>
   );
