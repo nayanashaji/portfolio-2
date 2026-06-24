@@ -62,7 +62,7 @@ export default function About() {
 
           <div className="flex justify-center">
             <img
-              src="/profile.jpg"
+              src="/profile.jpeg"
               alt="Nayana Shaji"
               className="
               w-[280px]
